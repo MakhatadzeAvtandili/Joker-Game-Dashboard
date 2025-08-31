@@ -4,6 +4,9 @@
 
 > ეს README შეიცავს სქრინშოტებს. ქვემოთ მოცემული გამოსახულებები placeholder-ებია — შეგიძლია ნამდვილი სქრინებიც ჩაანაცვლო `screenshots/` საქაღალდეში, სახელების შენარჩუნებით.
 
+შეგიძლიათ გამოიყენოთ პირდაპირ:
+https://makhatadzeavtandili.github.io/Joker-Game-Dashboard/
+
 ---
 
 ## 📸 Screenshots
@@ -28,12 +31,12 @@
 ## ✨ შესაძლებლობები (შეჯამება)
 
 - 2 რეჟიმი: **ცხრიანები** და **რიგითობით**
-- დილერის მორიგეობა, პოზიციების ბეჯები *(პირველი/მეორე/მესამე/ბოლო)*
+- დილერის მორიგეობა, პოზიციების ბეჯები _(პირველი/მეორე/მესამე/ბოლო)_
 - ბიდის წესები ორივე ტიპზე (პასის/„შემავსებლის“ შეზღუდვები დილერზე)
 - „აიღო“ ველების ჯამური ლიმიტი = დარიგებული რაოდენობა
 - ხიშტი: „რიგითობით“ ავტომატური; „ცხრიანები“ კონფიგურირებადი
 - პასების ლიმიტი (არასავალდებულო) – 4 პასი თითო მოთამაშეზე
-- პრემია ინდივიდუალურად და წყვილებში *(Both add / Opp deduct)*
+- პრემია ინდივიდუალურად და წყვილებში _(Both add / Opp deduct)_
 - გუნდური ქულები (Team A = P1+P3, Team B = P2+P4)
 - Fixed Sidebar (Live Score + History), სტაბილური UI გრძელ სახელებზე
 
@@ -78,11 +81,12 @@ npm run preview
 - სესიების მართვა ზედა მენიუდან (შექმნა/გადარქმევა/გასვლა/წაშლა)
 
 **Reset:**  
-DevTools → Application → Clear Storage → *Clear site data*  
+DevTools → Application → Clear Storage → _Clear site data_  
 ან კონსოლში:
+
 ```js
-localStorage.removeItem('joker_user');
-localStorage.removeItem('joker_games');
+localStorage.removeItem("joker_user");
+localStorage.removeItem("joker_games");
 ```
 
 ---
