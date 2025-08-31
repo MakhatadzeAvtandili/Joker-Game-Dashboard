@@ -52,7 +52,3 @@ tbody tr:hover {
 .manual-width {
   width: 100%;
 }
-
-table td {
-  width: 20% !important;
-}
