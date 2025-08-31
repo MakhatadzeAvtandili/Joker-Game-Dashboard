@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+body {
+  @apply bg-black text-white;
+}
+select,
+input {
+  @apply outline-none;
+}
+.badge {
+  @apply inline-flex items-center gap-1 text-[10px] px-1.5 py-0.5 rounded-full bg-white/10 border border-white/10;
+}
+.teamtag {
+  @apply text-[10px] px-1 py-0.5 rounded bg-indigo-500/20 border border-indigo-400/30;
+}
+.subtle {
+  @apply text-[10px] text-zinc-400;
+}
+.playername {
+  @apply text-xs font-medium text-zinc-200;
+}
+.cellbox {
+  @apply flex flex-col gap-1;
+}
+.sel {
+  @apply w-full px-2 py-1 rounded-lg bg-black/40 border border-white/10;
+}
+
+.sidebar-sticky {
+  position: sticky;
+  top: 72px;
+}
+
+/* Small visual tweaks */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+tbody tr:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.playername .nm {
+  @apply truncate max-w-[120px] sm:max-w-[160px] md:max-w-[200px] basis-0 grow;
+}
+
+.manual-width {
+  width: 100%;
+}
+
+table td {
+  width: 20% !important;
+}
