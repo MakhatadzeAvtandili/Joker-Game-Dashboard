@@ -15,6 +15,7 @@ const EXACT_MAP = {
 const clamp = (n, a, b) => Math.max(a, Math.min(b, n));
 const uid = () => Math.random().toString(36).slice(2);
 const cn = (...xs) => xs.filter(Boolean).join(" ");
+const fmt = (v) => (v / 100).toFixed(1);
 
 const LS_USER = "joker_user";
 const LS_GAMES = "joker_games";
@@ -930,7 +931,7 @@ function LiveTotalsCard({ game, derived }) {
                 }}
               />
             </div>
-            <div className="w-16 text-right font-semibold">{teamA}</div>
+            <div className="w-16 text-right font-semibold">{fmt(teamA)}</div>
           </div>
           <div className="flex items-center gap-2 mt-2">
             <div className="w-28 text-zinc-300">Team B</div>
@@ -946,7 +947,7 @@ function LiveTotalsCard({ game, derived }) {
                 }}
               />
             </div>
-            <div className="w-16 text-right font-semibold">{teamB}</div>
+            <div className="w-16 text-right font-semibold">{fmt(teamB)}</div>
           </div>
           <div className="text-xs text-zinc-400 mt-1">
             {players[0]}+{players[2]} vs {players[1]}+{players[3]}
@@ -973,7 +974,7 @@ function LiveTotalsCard({ game, derived }) {
               />
             </div>
             <div className="w-16 text-right font-semibold">
-              {derived.setCum[i] || 0}
+              {fmt(derived.setCum[i] || 0)}
             </div>
           </div>
         ))}
@@ -1017,13 +1018,13 @@ function HistoryCard({ game, onChange, derived }) {
               <td className="p-2">{index + 1}</td>
               {sum.map((v, i) => (
                 <td key={i} className="p-2">
-                  {v}
+                  {fmt(v)}
                 </td>
               ))}
               {pairsEnabled && (
                 <>
-                  <td className="p-2">{teamSum?.[0] ?? sum[0] + sum[2]}</td>
-                  <td className="p-2">{teamSum?.[1] ?? sum[1] + sum[3]}</td>
+                  <td className="p-2">{fmt(teamSum?.[0] ?? sum[0] + sum[2])}</td>
+                  <td className="p-2">{fmt(teamSum?.[1] ?? sum[1] + sum[3])}</td>
                 </>
               )}
             </tr>
@@ -1032,13 +1033,13 @@ function HistoryCard({ game, onChange, derived }) {
             <td className="p-2">ჯამი</td>
             {grand.map((v, i) => (
               <td key={i} className="p-2">
-                {v}
+                {fmt(v)}
               </td>
             ))}
             {pairsEnabled && (
               <>
-                <td className="p-2">{teamGrand[0]}</td>
-                <td className="p-2">{teamGrand[1]}</td>
+                <td className="p-2">{fmt(teamGrand[0])}</td>
+                <td className="p-2">{fmt(teamGrand[1])}</td>
               </>
             )}
           </tr>
